@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="One-Dur-Bread"
+run/main_scene="uid://daxo5p346dqyh"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
