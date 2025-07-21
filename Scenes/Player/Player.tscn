@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8bodxvggafb5"]
+[gd_scene load_steps=4 format=3 uid="uid://b8bodxvggafb5"]
 
+[ext_resource type="Script" uid="uid://ch5y1ilx0jt08" path="res://Scenes/Player/player.gd" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://ky7lv1p4h7ee" path="res://Assets/Actor/Player/Bread.png" id="1_s0eop"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
@@ -7,8 +8,10 @@ radius = 8.0
 height = 16.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_ft8w5")
 
-[node name="Player-bread" type="Sprite2D" parent="."]
+[node name="Player" type="Sprite2D" parent="."]
 texture = ExtResource("1_s0eop")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
