@@ -3,6 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://b8bodxvggafb5" path="res://Scenes/Player/Player.tscn" id="1_0nga1"]
 [ext_resource type="PackedScene" uid="uid://re77w34lhpv2" path="res://Scenes/Fridge/fridge.tscn" id="2_uhvlp"]
 [ext_resource type="PackedScene" uid="uid://bwiddhvguntu2" path="res://Scenes/Walls and Floors/wall.tscn" id="3_fb22s"]
+[gd_scene load_steps=6 format=3 uid="uid://daxo5p346dqyh"]
+
+[ext_resource type="PackedScene" uid="uid://b8bodxvggafb5" path="res://Scenes/Player/Player.tscn" id="1_0nga1"]
+[ext_resource type="PackedScene" uid="uid://re77w34lhpv2" path="res://Scenes/Fridge/fridge.tscn" id="2_uhvlp"]
+[ext_resource type="PackedScene" uid="uid://bdvvbfgowmxnk" path="res://Scenes/Dresser/Dresser.tscn" id="3_fb22s"]
+[ext_resource type="PackedScene" uid="uid://bxmby8lguceyu" path="res://Scenes/Bed/Bed.tscn" id="3_n7qaj"]
 
 [sub_resource type="TileSet" id="TileSet_0nga1"]
 tile_size = Vector2i(32, 32)
@@ -14,6 +20,12 @@ tile_set = SubResource("TileSet_0nga1")
 
 [node name="Fridge" parent="ObstacleLayer" instance=ExtResource("2_uhvlp")]
 position = Vector2(48, 16)
+position = Vector2(32, 16)
+
+[node name="Dresser" parent="ObstacleLayer" instance=ExtResource("3_fb22s")]
+position = Vector2(66, 16)
+[node name="Bed" parent="ObstacleLayer" instance=ExtResource("3_n7qaj")]
+position = Vector2(-35, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_0nga1")]
 
