@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://daxo5p346dqyh"]
+[gd_scene load_steps=5 format=4 uid="uid://daxo5p346dqyh"]
 
 [ext_resource type="PackedScene" uid="uid://b8bodxvggafb5" path="res://Scenes/Player/Player.tscn" id="1_0nga1"]
 [ext_resource type="PackedScene" uid="uid://re77w34lhpv2" path="res://Scenes/Fridge/fridge.tscn" id="2_uhvlp"]
+[ext_resource type="PackedScene" uid="uid://bwiddhvguntu2" path="res://Scenes/Walls and Floors/wall.tscn" id="3_fb22s"]
 
 [sub_resource type="TileSet" id="TileSet_0nga1"]
 tile_size = Vector2i(32, 32)
@@ -18,3 +19,6 @@ position = Vector2(48, 16)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2.5, 2.5)
+
+[node name="Wall" parent="." instance=ExtResource("3_fb22s")]
+tile_map_data = PackedByteArray("AAD7//3/AQAAAAAAAAD7//7/AQAAAAAAAAD7////AQAAAAAAAAD7/wAAAQAAAAAAAAD7/wEAAQAAAAAAAAD7/wIAAQAAAAAAAAD7/wMAAQAAAAAAAAD7/wQAAQAAAAAAAAD7/wUAAQAAAAAAAAD7/wYAAQAAAAAAAAD8/wYAAQAAAAAAAAD9/wYAAQAAAAAAAAD+/wYAAQAAAAAAAAD//wYAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAYAAQAAAAAAAAACAAYAAQAAAAAAAAADAAYAAQAAAAAAAAAEAAYAAQAAAAAAAAAFAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAHAAUAAQAAAAAAAAAHAAQAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAHAAAAAQAAAAAAAAAHAP//AQAAAAAAAAAHAP7/AQAAAAAAAAAHAP3/AQAAAAAAAAAHAPv/AQAAAAAAAAAHAPr/AQAAAAAAAAAHAPz/AQAAAAAAAAAGAPr/AQAAAAAAAAAFAPr/AQAAAAAAAAAEAPr/AQAAAAAAAAADAPr/AQAAAAAAAAACAPr/AQAAAAAAAAABAPr/AQAAAAAAAAAAAPr/AQAAAAAAAAD///r/AQAAAAAAAAD+//r/AQAAAAAAAAD9//r/AQAAAAAAAAD8//r/AQAAAAAAAAD7//r/AQAAAAAAAAD7//v/AQAAAAAAAAD7//z/AQAAAAAAAAA=")
