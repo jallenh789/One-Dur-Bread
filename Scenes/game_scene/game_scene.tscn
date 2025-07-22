@@ -19,11 +19,11 @@ tile_size = Vector2i(32, 32)
 tile_set = SubResource("TileSet_0nga1")
 
 [node name="Fridge" parent="ObstacleLayer" instance=ExtResource("2_uhvlp")]
-position = Vector2(48, 16)
 position = Vector2(32, 16)
 
 [node name="Dresser" parent="ObstacleLayer" instance=ExtResource("3_fb22s")]
 position = Vector2(66, 16)
+
 [node name="Bed" parent="ObstacleLayer" instance=ExtResource("3_n7qaj")]
 position = Vector2(-35, 0)
 
