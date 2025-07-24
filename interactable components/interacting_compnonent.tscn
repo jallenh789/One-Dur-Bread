@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://f34s06ywg0a0" path="res://interactable components/interacting_compnonent.gd" id="1_c0mha"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nuyy1"]
+radius = 19.0
 
 [sub_resource type="FontVariation" id="FontVariation_c0mha"]
 
@@ -13,6 +14,7 @@ outline_size = 5
 outline_color = Color(0.0726308, 0.0205597, 6.01634e-09, 1)
 
 [node name="interacting component" type="Node2D"]
+position = Vector2(37, 139)
 script = ExtResource("1_c0mha")
 
 [node name="interactrange" type="Area2D" parent="."]
