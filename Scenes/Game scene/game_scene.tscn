@@ -10,6 +10,7 @@
 tile_size = Vector2i(32, 32)
 
 [node name="GameScene" type="Node2D"]
+position = Vector2(57, 33)
 
 [node name="ObstacleLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_0nga1")
@@ -24,6 +25,7 @@ position = Vector2(66, 16)
 position = Vector2(-35, 0)
 
 [node name="Player" parent="." instance=ExtResource("4_guf3j")]
+position = Vector2(48, 74)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2.5, 2.5)
