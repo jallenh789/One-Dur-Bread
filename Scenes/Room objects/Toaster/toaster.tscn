@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6eg6crmq5io8"]
+
+[ext_resource type="Texture2D" uid="uid://chb8xqakipgsy" path="res://Assets/Temporary/Toaster.png" id="1_yhkad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abg8a"]
+size = Vector2(20, 18)
+
+[node name="Toaster" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yhkad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_abg8a")
