@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq22e2hjoj2wo"
-path="res://.godot/imported/Wall and Floor Tile Sets.png-a95936eb5723a0bdeb426daf7707460b.ctex"
+uid="uid://b8jgxydo8kfs5"
+path="res://.godot/imported/Wall and Floor Tile Sets 2.png-0e31e6274b8a7dadde0e3443fc60da83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WallsAndFloors/Wall and Floor Tile Sets.png"
-dest_files=["res://.godot/imported/Wall and Floor Tile Sets.png-a95936eb5723a0bdeb426daf7707460b.ctex"]
+source_file="res://Assets/WallsAndFloors/Wall and Floor Tile Sets 2.png"
+dest_files=["res://.godot/imported/Wall and Floor Tile Sets 2.png-0e31e6274b8a7dadde0e3443fc60da83.ctex"]
 
 [params]
 
