@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=39 format=3 uid="uid://b8bodxvggafb5"]
+[gd_scene load_steps=40 format=3 uid="uid://b8bodxvggafb5"]
 
 [ext_resource type="Script" uid="uid://ch5y1ilx0jt08" path="res://Scenes/Player/player.gd" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://dmcq4a160h0ap" path="res://Assets/Actor/Player/Shaded 64 bit Character original size.png" id="2_ft8w5"]
@@ -265,12 +264,10 @@ animations = [{
 "speed": 8.0
 }]
 
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 radius = 8.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(17, 37)
 motion_mode = 1
 script = ExtResource("1_ft8w5")
 
@@ -278,7 +275,7 @@ script = ExtResource("1_ft8w5")
 sprite_frames = SubResource("SpriteFrames_s0eop")
 animation = &"move_up"
 
-[node name="interacting component" parent="Player" instance=ExtResource("3_h54ih")]
+[node name="Player#interacting component" parent="." instance=ExtResource("3_h54ih")]
 position = Vector2(-1, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
