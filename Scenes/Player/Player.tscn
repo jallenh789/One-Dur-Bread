@@ -1,11 +1,13 @@
+
 [gd_scene load_steps=39 format=3 uid="uid://b8bodxvggafb5"]
 
 [ext_resource type="Script" uid="uid://ch5y1ilx0jt08" path="res://Scenes/Player/player.gd" id="1_ft8w5"]
-[ext_resource type="Texture2D" uid="uid://dmcq4a160h0ap" path="res://Assets/Actor/Player/Shaded 64 bit Character original size.png" id="2_ude3g"]
+[ext_resource type="Texture2D" uid="uid://dmcq4a160h0ap" path="res://Assets/Actor/Player/Shaded 64 bit Character original size.png" id="2_ft8w5"]
+[ext_resource type="PackedScene" uid="uid://b4ggbjkpsjqt3" path="res://interactable components/interacting_compnonent.tscn" id="3_h54ih"]
 [ext_resource type="Texture2D" uid="uid://d0sa42qlicogy" path="res://Assets/Actor/Player/64bit sprite sheet100.png" id="4_jmcll"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lw74r"]
-atlas = ExtResource("2_ude3g")
+atlas = ExtResource("2_ft8w5")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h54ih"]
@@ -263,11 +265,12 @@ animations = [{
 "speed": 8.0
 }]
 
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 radius = 8.0
-height = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(17, 37)
 motion_mode = 1
 script = ExtResource("1_ft8w5")
 
@@ -275,6 +278,9 @@ script = ExtResource("1_ft8w5")
 sprite_frames = SubResource("SpriteFrames_s0eop")
 animation = &"move_up"
 
+[node name="interacting component" parent="Player" instance=ExtResource("3_h54ih")]
+position = Vector2(-1, 9)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 18)
+position = Vector2(0, 19)
 shape = SubResource("CapsuleShape2D_ft8w5")
