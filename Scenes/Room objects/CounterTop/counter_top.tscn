@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkes6yu3usvjn"]
+
+[ext_resource type="Texture2D" uid="uid://7jdb1rfbwu20" path="res://Assets/Temporary/Counter.png" id="1_kl1x7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wqdc"]
+size = Vector2(24, 19)
+
+[node name="CounterTop" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kl1x7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_2wqdc")
