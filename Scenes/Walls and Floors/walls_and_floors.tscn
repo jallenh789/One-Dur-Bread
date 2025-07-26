@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwiddhvguntu2"]
+
+[ext_resource type="Texture2D" uid="uid://b8jgxydo8kfs5" path="res://Assets/WallsAndFloors/Wall and Floor Tile Sets 2.png" id="1_f5wso"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kn2kw"]
+texture = ExtResource("1_f5wso")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 2.54905, 16, 1.91179, 16, -16, -16, -16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.91178, -16, 16, -16, 16, 16, -1.91178, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.23042, 16, 2.23042, 2.23042, 16, 2.23042, 16, -16, -16, -16, -16, 16)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 2.54905, -1.91178, 2.54905, -2.23041, 16, 16, 16, 16, -16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.59315, -16, 1.91179, 16, -16, 16, -16, -16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -1.59315, 16, -1.59315, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.23042, -16, 2.23042, -2.54905, 16, -1.91179, 16, 16, -16, 16, -16, -16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.23041, -16, -2.86768, -2.54905, -16, -2.54905, -16, 16, 16, 16, 16, -16)
+0:2/0 = 0
+0:2/0/z_index = -1
+1:2/0 = 0
+1:2/0/z_index = -1
+2:2/0 = 0
+2:2/0/z_index = -1
+3:2/0 = 0
+3:2/0/z_index = -1
+0:3/0 = 0
+0:3/0/z_index = -1
+1:3/0 = 0
+1:3/0/z_index = -1
+2:3/0 = 0
+2:3/0/z_index = -1
+3:3/0 = 0
+3:3/0/z_index = -1
+
+[sub_resource type="TileSet" id="TileSet_h37tu"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+sources/0 = SubResource("TileSetAtlasSource_kn2kw")
+
+[node name="WallsAndFloors" type="TileMapLayer"]
+tile_set = SubResource("TileSet_h37tu")
