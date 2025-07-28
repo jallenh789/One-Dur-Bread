@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://f34s06ywg0a0" path="res://interactable components/interacting_compnonent.gd" id="1_c0mha"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nuyy1"]
-radius = 19.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0mha"]
 
 [sub_resource type="FontVariation" id="FontVariation_c0mha"]
 
@@ -14,13 +13,13 @@ outline_size = 5
 outline_color = Color(0.0726308, 0.0205597, 6.01634e-09, 1)
 
 [node name="interacting component" type="Node2D"]
-position = Vector2(37, 139)
 script = ExtResource("1_c0mha")
 
 [node name="interactrange" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactrange"]
-shape = SubResource("CircleShape2D_nuyy1")
+shape = SubResource("RectangleShape2D_c0mha")
+debug_color = Color(0.0971074, 0.648423, 1.34766e-06, 0.42)
 
 [node name="interactlabel" type="Label" parent="."]
 anchors_preset = 8
@@ -28,10 +27,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -69.0
-offset_top = -62.0
-offset_right = 72.0
-offset_bottom = -13.0
+offset_left = -68.0
+offset_top = -83.0
+offset_right = 73.0
+offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Press E to Interact

@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://re77w34lhpv2"]
+[gd_scene load_steps=8 format=3 uid="uid://b60lhknr0otp1"]
 
-[ext_resource type="Script" uid="uid://ch6sn23q1buyo" path="res://Scenes/Room objects/Fridge/fridge.gd" id="1_6qsge"]
-[ext_resource type="Texture2D" uid="uid://d1sw3ivpalaln" path="res://Assets/Backgrounds/Room Objects/Fridge/fridge.png" id="1_s1ena"]
-[ext_resource type="PackedScene" uid="uid://ddu1j52p5nyt7" path="res://interactable components/interactable.tscn" id="3_muxh0"]
-[ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="4_muxh0"]
+[ext_resource type="Script" uid="uid://ch6sn23q1buyo" path="res://Scenes/Room objects/Fridge/fridge.gd" id="1_qnp68"]
+[ext_resource type="Texture2D" uid="uid://47ehtxk2helc" path="res://Assets/Backgrounds/Room Objects/Dresser/Dresser.png" id="2_35eop"]
+[ext_resource type="PackedScene" uid="uid://ddu1j52p5nyt7" path="res://interactable components/interactable.tscn" id="3_qgftf"]
+[ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="4_2aqhl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8k2"]
 size = Vector2(32, 32)
@@ -15,18 +15,18 @@ size = Vector2(32, 32)
 font_size = 32
 font_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
 
-[node name="Fridge" type="StaticBody2D"]
-script = ExtResource("1_6qsge")
+[node name="Dresser" type="StaticBody2D"]
+script = ExtResource("1_qnp68")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_s1ena")
+texture = ExtResource("2_35eop")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4s8k2")
 
-[node name="interactable" parent="." instance=ExtResource("3_muxh0")]
+[node name="interactable" parent="." instance=ExtResource("3_qgftf")]
 position = Vector2(70, 101)
-interact_name = "Check Fridge"
+interact_name = "Check Dresser"
 
 [node name="InteractableShape2D" type="CollisionShape2D" parent="interactable"]
 position = Vector2(-70, -101)
@@ -41,12 +41,12 @@ offset_top = 446.0
 offset_right = 467.0
 offset_bottom = 510.0
 scale = Vector2(2.76064, 2.45258)
-texture = ExtResource("4_muxh0")
+texture = ExtResource("4_2aqhl")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 166.0
 offset_top = 463.0
 offset_right = 673.0
 offset_bottom = 551.0
-text = "Hello! me fridge!"
+text = "Hello! me Dresser!"
 label_settings = SubResource("LabelSettings_muxh0")
