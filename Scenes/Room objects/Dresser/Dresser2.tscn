@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://b60lhknr0otp1"]
 
-[ext_resource type="Script" uid="uid://ch6sn23q1buyo" path="res://Scenes/Room objects/Fridge/fridge.gd" id="1_qnp68"]
+[ext_resource type="Script" uid="uid://klvoqdgquy03" path="res://Scenes/Room objects/Dresser/dresser_2.gd" id="1_35eop"]
 [ext_resource type="Texture2D" uid="uid://47ehtxk2helc" path="res://Assets/Backgrounds/Room Objects/Dresser/Dresser.png" id="2_35eop"]
 [ext_resource type="PackedScene" uid="uid://ddu1j52p5nyt7" path="res://interactable components/interactable.tscn" id="3_qgftf"]
 [ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="4_2aqhl"]
@@ -16,7 +16,7 @@ font_size = 32
 font_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
 
 [node name="Dresser" type="StaticBody2D"]
-script = ExtResource("1_qnp68")
+script = ExtResource("1_35eop")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_35eop")
@@ -48,5 +48,5 @@ offset_left = 166.0
 offset_top = 463.0
 offset_right = 673.0
 offset_bottom = 551.0
-text = "Hello! me Dresser!"
+text = "Dresser! I Barley know her!"
 label_settings = SubResource("LabelSettings_muxh0")

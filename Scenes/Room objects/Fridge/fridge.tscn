@@ -12,7 +12,7 @@ size = Vector2(32, 32)
 size = Vector2(32, 32)
 
 [sub_resource type="LabelSettings" id="LabelSettings_muxh0"]
-font_size = 32
+font_size = 28
 font_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
 
 [node name="Fridge" type="StaticBody2D"]
@@ -35,7 +35,7 @@ shape = SubResource("RectangleShape2D_muxh0")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="DialogBoxTexture" type="TextureRect" parent="CanvasLayer"]
 offset_left = 147.0
 offset_top = 446.0
 offset_right = 467.0
@@ -43,10 +43,11 @@ offset_bottom = 510.0
 scale = Vector2(2.76064, 2.45258)
 texture = ExtResource("4_muxh0")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="DialogLabel" type="Label" parent="CanvasLayer"]
 offset_left = 166.0
-offset_top = 463.0
-offset_right = 673.0
-offset_bottom = 551.0
+offset_top = 457.0
+offset_right = 1012.0
+offset_bottom = 590.0
 text = "Hello! me fridge!"
 label_settings = SubResource("LabelSettings_muxh0")
+autowrap_mode = 3
