@@ -19,15 +19,19 @@ func _process(_delta: float) -> void:
 	
 	if velocity.x > 0:
 		$AnimatedSprite2D.play("move_right")
+		$"Player#interacting component/interactrange/CollisionShape2D".position = Vector2(16,5)
 		
 	elif velocity.x < 0:
 		$AnimatedSprite2D.play("move_left")
+		$"Player#interacting component/interactrange/CollisionShape2D".position = Vector2(-16,5)
 		
 	elif velocity.y > 0:
 		$AnimatedSprite2D.play("move_down")
+		$"Player#interacting component/interactrange/CollisionShape2D".position = Vector2(0,30)
 		
 	elif velocity.y < 0:
 		$AnimatedSprite2D.play("move_up")
+		$"Player#interacting component/interactrange/CollisionShape2D".position = Vector2(0,-7)
 		
 	else:
 		$AnimatedSprite2D.stop()
