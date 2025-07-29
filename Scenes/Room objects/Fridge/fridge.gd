@@ -17,4 +17,4 @@ func _on_interact():
 		else:
 			$CanvasLayer.visible = true
 			Global.paused_movement = true
-	
+			

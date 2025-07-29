@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://4oh1axpe15v7"]
+
+[ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="1_s78p0"]
+[ext_resource type="Script" uid="uid://cbejav6ernhv6" path="res://Scenes/Menu/PlayAgain.gd" id="2_xprsg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xprsg"]
+font_size = 64
+font_color = Color(0.0110876, 0.0110876, 0.0110876, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -20.0
+offset_right = 1166.0
+offset_bottom = 659.0
+color = Color(0.878431, 0.968627, 0.721569, 0.341176)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 64.0
+offset_right = 1140.0
+offset_bottom = 566.0
+texture = ExtResource("1_s78p0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 178.0
+offset_right = 866.0
+offset_bottom = 357.0
+text = "Victory!!! 
+You have Won!!!!!"
+label_settings = SubResource("LabelSettings_xprsg")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 406.0
+offset_right = 675.0
+offset_bottom = 459.0
+theme_override_font_sizes/font_size = 32
+text = "Play again?"
+script = ExtResource("2_xprsg")
