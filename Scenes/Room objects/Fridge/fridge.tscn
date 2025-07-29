@@ -1,15 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://re77w34lhpv2"]
+[gd_scene load_steps=9 format=3 uid="uid://re77w34lhpv2"]
 
 [ext_resource type="Script" uid="uid://ch6sn23q1buyo" path="res://Scenes/Room objects/Fridge/fridge.gd" id="1_6qsge"]
-[ext_resource type="Texture2D" uid="uid://d1sw3ivpalaln" path="res://Assets/Backgrounds/Room Objects/Fridge/fridge.png" id="1_s1ena"]
+[ext_resource type="Texture2D" uid="uid://dp7pxfspikdwk" path="res://Assets/Backgrounds/Room Objects/Furnitue Sprite Sheet/Furniture sprite sheet.png" id="2_muxh0"]
 [ext_resource type="PackedScene" uid="uid://ddu1j52p5nyt7" path="res://interactable components/interactable.tscn" id="3_muxh0"]
 [ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="4_muxh0"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_53ttk"]
+atlas = ExtResource("2_muxh0")
+region = Rect2(128, 64, 32, 64)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8k2"]
-size = Vector2(32, 32)
+size = Vector2(30, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muxh0"]
-size = Vector2(32, 32)
+size = Vector2(26, 28)
 
 [sub_resource type="LabelSettings" id="LabelSettings_muxh0"]
 font_size = 28
@@ -19,9 +23,10 @@ font_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
 script = ExtResource("1_6qsge")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_s1ena")
+texture = SubResource("AtlasTexture_53ttk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_4s8k2")
 
 [node name="interactable" parent="." instance=ExtResource("3_muxh0")]
@@ -29,8 +34,9 @@ position = Vector2(70, 101)
 interact_name = "Check Fridge"
 
 [node name="InteractableShape2D" type="CollisionShape2D" parent="interactable"]
-position = Vector2(-70, -101)
+position = Vector2(-70, -97)
 shape = SubResource("RectangleShape2D_muxh0")
+debug_color = Color(0.0980392, 0.647059, 0, 0.419608)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

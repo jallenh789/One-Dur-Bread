@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4nfx0rpu0qt3"]
+
+[ext_resource type="Script" uid="uid://db7mji6pbqqgc" path="res://Scenes/Room objects/Bed/bed_2.gd" id="1_q1ht5"]
+[ext_resource type="Texture2D" uid="uid://dp7pxfspikdwk" path="res://Assets/Backgrounds/Room Objects/Furnitue Sprite Sheet/Furniture sprite sheet.png" id="2_q1ht5"]
+[ext_resource type="PackedScene" uid="uid://ddu1j52p5nyt7" path="res://interactable components/interactable.tscn" id="3_gys2e"]
+[ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="4_qyvkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_041fh"]
+atlas = ExtResource("2_q1ht5")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8k2"]
+size = Vector2(60, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muxh0"]
+size = Vector2(58, 29)
+
+[sub_resource type="LabelSettings" id="LabelSettings_muxh0"]
+font_size = 28
+font_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
+
+[node name="Bed2" type="StaticBody2D"]
+script = ExtResource("1_q1ht5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_041fh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_4s8k2")
+
+[node name="interactable" parent="." instance=ExtResource("3_gys2e")]
+position = Vector2(70, 101)
+interact_name = "Check Bed"
+
+[node name="InteractableShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(-70, -100.5)
+shape = SubResource("RectangleShape2D_muxh0")
+debug_color = Color(0.0980392, 0.647059, 0, 0.419608)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="DialogBoxTexture" type="TextureRect" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 446.0
+offset_right = 467.0
+offset_bottom = 510.0
+scale = Vector2(2.76064, 2.45258)
+texture = ExtResource("4_qyvkg")
+
+[node name="DialogLabel" type="Label" parent="CanvasLayer"]
+offset_left = 166.0
+offset_top = 457.0
+offset_right = 1012.0
+offset_bottom = 590.0
+text = "That’s a bed, it looks like it would be very comfortable, but you wouldn’t know since you woke up on the floor."
+label_settings = SubResource("LabelSettings_muxh0")
+autowrap_mode = 3
