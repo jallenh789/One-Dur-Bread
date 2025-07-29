@@ -8,7 +8,7 @@ func _ready() -> void:
 	
 	
 func _on_interact():
-	print("That is a Dresser")
+	print("That is a toilet")
 	interactable.is_interactable = true
 	if Input.is_action_just_pressed("interact"):
 		if $CanvasLayer.visible:

@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://djqmtovhu0e8y"]
+
+[ext_resource type="Script" uid="uid://36u3p5t74nxl" path="res://Scenes/Room objects/Toilet/toilet_2.gd" id="1_bunq0"]
+[ext_resource type="Texture2D" uid="uid://dp7pxfspikdwk" path="res://Assets/Backgrounds/Room Objects/Furnitue Sprite Sheet/Furniture sprite sheet.png" id="2_bunq0"]
+[ext_resource type="PackedScene" uid="uid://ddu1j52p5nyt7" path="res://interactable components/interactable.tscn" id="3_6lbf1"]
+[ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="4_a1qdb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cd7ns"]
+atlas = ExtResource("2_bunq0")
+region = Rect2(64, 128, 32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8k2"]
+size = Vector2(19, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muxh0"]
+size = Vector2(21, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_muxh0"]
+font_size = 28
+font_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
+
+[node name="toilet2" type="StaticBody2D"]
+script = ExtResource("1_bunq0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = SubResource("AtlasTexture_cd7ns")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2.5)
+shape = SubResource("RectangleShape2D_4s8k2")
+
+[node name="interactable" parent="." instance=ExtResource("3_6lbf1")]
+position = Vector2(70, 101)
+interact_name = "Check Toilet"
+
+[node name="InteractableShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(-70.5, -103)
+shape = SubResource("RectangleShape2D_muxh0")
+debug_color = Color(0.0980392, 0.647059, 0, 0.419608)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="DialogBoxTexture" type="TextureRect" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 446.0
+offset_right = 467.0
+offset_bottom = 510.0
+scale = Vector2(2.76064, 2.45258)
+texture = ExtResource("4_a1qdb")
+
+[node name="DialogLabel" type="Label" parent="CanvasLayer"]
+offset_left = 166.0
+offset_top = 457.0
+offset_right = 1012.0
+offset_bottom = 590.0
+text = "*SIGH* That is a toilet, you wouldn’t want bread from there, it would be the worst kind of wet."
+label_settings = SubResource("LabelSettings_muxh0")
+autowrap_mode = 3

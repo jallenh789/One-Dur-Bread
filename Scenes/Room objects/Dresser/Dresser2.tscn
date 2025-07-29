@@ -1,15 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://b60lhknr0otp1"]
+[gd_scene load_steps=9 format=3 uid="uid://b60lhknr0otp1"]
 
 [ext_resource type="Script" uid="uid://klvoqdgquy03" path="res://Scenes/Room objects/Dresser/dresser_2.gd" id="1_35eop"]
-[ext_resource type="Texture2D" uid="uid://47ehtxk2helc" path="res://Assets/Backgrounds/Room Objects/Dresser/Dresser.png" id="2_35eop"]
+[ext_resource type="Texture2D" uid="uid://dp7pxfspikdwk" path="res://Assets/Backgrounds/Room Objects/Furnitue Sprite Sheet/Furniture sprite sheet.png" id="2_35eop"]
 [ext_resource type="PackedScene" uid="uid://ddu1j52p5nyt7" path="res://interactable components/interactable.tscn" id="3_qgftf"]
 [ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="4_2aqhl"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_llur4"]
+atlas = ExtResource("2_35eop")
+region = Rect2(64, 0, 64, 64)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s8k2"]
-size = Vector2(32, 32)
+size = Vector2(60, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_muxh0"]
-size = Vector2(32, 32)
+size = Vector2(58, 13)
 
 [sub_resource type="LabelSettings" id="LabelSettings_muxh0"]
 font_size = 32
@@ -19,9 +23,10 @@ font_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
 script = ExtResource("1_35eop")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_35eop")
+texture = SubResource("AtlasTexture_llur4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_4s8k2")
 
 [node name="interactable" parent="." instance=ExtResource("3_qgftf")]
@@ -29,8 +34,9 @@ position = Vector2(70, 101)
 interact_name = "Check Dresser"
 
 [node name="InteractableShape2D" type="CollisionShape2D" parent="interactable"]
-position = Vector2(-70, -101)
+position = Vector2(-70, -87.5)
 shape = SubResource("RectangleShape2D_muxh0")
+debug_color = Color(0.0980392, 0.647059, 0, 0.419608)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
