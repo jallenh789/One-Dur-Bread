@@ -1,25 +1,59 @@
-[gd_scene load_steps=5 format=3 uid="uid://daxo5p346dqyh"]
+[gd_scene load_steps=13 format=4 uid="uid://daxo5p346dqyh"]
 
 [ext_resource type="PackedScene" uid="uid://re77w34lhpv2" path="res://Scenes/Room objects/Fridge/fridge.tscn" id="1_s85sh"]
+[ext_resource type="PackedScene" uid="uid://bwiddhvguntu2" path="res://Scenes/Walls and Floors/walls_and_floors.tscn" id="1_w45xp"]
+[ext_resource type="PackedScene" uid="uid://wm83vph8i8o0" path="res://Scenes/Room objects/Oven/Oven.tscn" id="2_6na3c"]
 [ext_resource type="PackedScene" uid="uid://b60lhknr0otp1" path="res://Scenes/Room objects/Dresser/Dresser2.tscn" id="3_32hi6"]
 [ext_resource type="PackedScene" uid="uid://b8bodxvggafb5" path="res://Scenes/Player/Player.tscn" id="4_guf3j"]
+[ext_resource type="PackedScene" uid="uid://d4nfx0rpu0qt3" path="res://Scenes/Room objects/Bed/Bed2.tscn" id="4_jb785"]
+[ext_resource type="PackedScene" uid="uid://dt6j5gvt78dwj" path="res://Scenes/Room objects/Bookshelves/BookShelf.tscn" id="5_swxqe"]
+[ext_resource type="PackedScene" uid="uid://b78den58888n" path="res://Scenes/Room objects/CounterTop/counter_top2.tscn" id="6_6na3c"]
+[ext_resource type="PackedScene" uid="uid://cg7mwsia30wcg" path="res://Scenes/Room objects/Toaster/toaster2.tscn" id="7_bjh1m"]
+[ext_resource type="PackedScene" uid="uid://djqmtovhu0e8y" path="res://Scenes/Room objects/Toilet/toilet2.tscn" id="8_2ts70"]
+[ext_resource type="PackedScene" uid="uid://bml2qj6wkleqa" path="res://Scenes/Room objects/KitchenSink/KitchenSink.tscn" id="9_swxqe"]
 
 [sub_resource type="TileSet" id="TileSet_0nga1"]
 tile_size = Vector2i(32, 32)
 
 [node name="GameScene" type="Node2D"]
 
+[node name="Floors" parent="." instance=ExtResource("1_w45xp")]
+tile_map_data = PackedByteArray("AAD8//3/AAABAAMAAAD9//3/AAABAAMAAAD8//7/AAABAAIAAAD8////AAABAAMAAAD9//7/AAABAAIAAAD9////AAABAAMAAAD8/wAAAAABAAIAAAD8/wEAAAABAAMAAAD9/wAAAAABAAIAAAD9/wEAAAABAAMAAAD8/wIAAAABAAIAAAD8/wMAAAABAAMAAAD9/wIAAAABAAIAAAD9/wMAAAABAAMAAAD8/wQAAAABAAIAAAD8/wUAAAABAAMAAAD9/wQAAAABAAIAAAD9/wUAAAABAAMAAAD+//3/AAAAAAMAAAD///3/AAABAAMAAAD+//7/AAAAAAIAAAD+////AAAAAAMAAAD///7/AAABAAIAAAD/////AAABAAMAAAD+/wAAAAAAAAIAAAD+/wEAAAAAAAMAAAD//wAAAAABAAIAAAD//wEAAAABAAMAAAD+/wIAAAAAAAIAAAD+/wMAAAAAAAMAAAD//wIAAAABAAIAAAD//wMAAAABAAMAAAD+/wQAAAAAAAIAAAD+/wUAAAAAAAMAAAD//wQAAAABAAIAAAD//wUAAAABAAMAAAAAAP3/AAAAAAMAAAABAP3/AAABAAMAAAAAAP7/AAAAAAIAAAAAAP//AAAAAAMAAAABAP7/AAABAAIAAAABAP//AAABAAMAAAAAAAAAAAAAAAIAAAAAAAEAAAAAAAIAAAABAAAAAAABAAIAAAABAAEAAAABAAIAAAAAAAMAAAACAAMAAAABAAMAAAADAAMAAAAAAAQAAAACAAIAAAAAAAUAAAACAAMAAAABAAQAAAADAAIAAAABAAUAAAADAAMAAAACAP3/AAAAAAMAAAADAP3/AAABAAMAAAACAP7/AAAAAAIAAAACAP//AAAAAAMAAAADAP7/AAABAAIAAAADAP//AAABAAMAAAACAAAAAAAAAAIAAAACAAEAAAAAAAIAAAADAAAAAAABAAIAAAADAAEAAAABAAIAAAACAAMAAAACAAMAAAADAAMAAAACAAIAAAACAAQAAAACAAIAAAACAAUAAAACAAMAAAADAAQAAAACAAIAAAADAAUAAAACAAMAAAAEAP3/AAAAAAMAAAAEAP7/AAAAAAIAAAAEAP//AAAAAAMAAAAEAAAAAAAAAAIAAAAEAAEAAAAAAAMAAAAEAAIAAAAAAAIAAAD7//z/AAAAAAIAAAD7//3/AAAAAAMAAAD8//z/AAAAAAMAAAD7//7/AAAAAAIAAAD7////AAAAAAMAAAD7/wAAAAAAAAIAAAD7/wEAAAAAAAMAAAD7/wIAAAAAAAIAAAD7/wMAAAAAAAMAAAD7/wQAAAAAAAIAAAD7/wUAAAAAAAMAAAD9//z/AAABAAMAAAD+//z/AAAAAAMAAAD///z/AAABAAMAAAAAAPz/AAAAAAMAAAABAPz/AAABAAMAAAACAPz/AAAAAAMAAAADAPz/AAABAAMAAAAEAPz/AAAAAAMAAAAEAAMAAAADAAIAAAAEAAQAAAADAAIAAAAEAAUAAAADAAMAAAACAAIAAAAAAAMAAAADAAIAAAABAAMAAAAAAAIAAAAAAAMAAAABAAIAAAABAAMAAAA=")
+
+[node name="Walls" parent="." instance=ExtResource("1_w45xp")]
+tile_map_data = PackedByteArray("AAD7/wUAAAACAAEAAAD7//z/AAACAAAAAAD8//z/AAAAAAAAAAD9//z/AAAAAAAAAAD+//z/AAAAAAAAAAD///z/AAAAAAAAAAAAAPz/AAAAAAAAAAABAPz/AAAAAAAAAAACAPz/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAADAAAAAAAEAAUAAAADAAEAAAADAAUAAAABAAEAAAACAAUAAAABAAEAAAABAAUAAAABAAEAAAAAAAUAAAABAAEAAAD//wUAAAABAAEAAAD+/wUAAAABAAEAAAD9/wUAAAABAAEAAAD8/wUAAAABAAEAAAD7//3/AAAAAAEAAAD7//7/AAAAAAEAAAD7////AAAAAAEAAAD7/wAAAAAAAAEAAAD7/wEAAAAAAAEAAAD7/wIAAAAAAAEAAAD7/wMAAAAAAAEAAAD7/wQAAAAAAAEAAAAEAP3/AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAEAAAAAAABAAAAAAAEAAEAAAABAAAAAAAEAAIAAAABAAAAAAAEAAMAAAABAAAAAAAEAAQAAAABAAAAAAA=")
+
 [node name="ObstacleLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_0nga1")
 
-[node name="Dresser" parent="ObstacleLayer" instance=ExtResource("3_32hi6")]
-position = Vector2(66, 16)
+[node name="Oven" parent="ObstacleLayer" instance=ExtResource("2_6na3c")]
+position = Vector2(6, -109)
+
+[node name="Bed2" parent="ObstacleLayer" instance=ExtResource("4_jb785")]
+position = Vector2(-109, 141)
 
 [node name="Fridge" parent="ObstacleLayer" instance=ExtResource("1_s85sh")]
-position = Vector2(32, 16)
+position = Vector2(-124, -108)
+
+[node name="counter_top2" parent="ObstacleLayer" instance=ExtResource("6_6na3c")]
+position = Vector2(-43, -93)
+
+[node name="toaster2" parent="ObstacleLayer" instance=ExtResource("7_bjh1m")]
+position = Vector2(-22, -122)
+
+[node name="toilet2" parent="ObstacleLayer" instance=ExtResource("8_2ts70")]
+position = Vector2(129, 140)
+
+[node name="kitchensink" parent="ObstacleLayer" instance=ExtResource("9_swxqe")]
+position = Vector2(-91, -109)
+
+[node name="BookShelf" parent="ObstacleLayer" instance=ExtResource("5_swxqe")]
+position = Vector2(109, -98)
+
+[node name="Dresser" parent="ObstacleLayer" instance=ExtResource("3_32hi6")]
+position = Vector2(-109, 47)
 
 [node name="Player" parent="." instance=ExtResource("4_guf3j")]
-position = Vector2(48, 74)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2.5, 2.5)

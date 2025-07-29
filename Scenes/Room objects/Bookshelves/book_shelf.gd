@@ -8,12 +8,13 @@ func _ready() -> void:
 	
 	
 func _on_interact():
-	print("That is a Dresser")
+	print("That is a Bookshelf")
 	interactable.is_interactable = true
 	if Input.is_action_just_pressed("interact"):
 		if $CanvasLayer.visible:
 			$CanvasLayer.visible = false
 			Global.paused_movement = false
+			get_tree().change_scene_to_file("res://Scenes/Menu/Victory.tscn")
 		else:
 			$CanvasLayer.visible = true
 			Global.paused_movement = true
