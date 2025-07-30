@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwiddhvguntu2"]
+[gd_scene load_steps=6 format=3 uid="uid://bwiddhvguntu2"]
 
 [ext_resource type="Texture2D" uid="uid://bo0t6x581saik" path="res://Assets/WallsAndFloors/Wall and Floor Tile Sets 2.png" id="1_f5wso"]
+[ext_resource type="Texture2D" uid="uid://bxrnfuwdqhuis" path="res://Assets/Temporary/Black Tile (32x32).png" id="2_kn2kw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kn2kw"]
 texture = ExtResource("1_f5wso")
@@ -46,11 +47,17 @@ texture_region_size = Vector2i(32, 32)
 3:3/0 = 0
 3:3/0/z_index = -2
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2reo6"]
+texture = ExtResource("2_kn2kw")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_h37tu"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_kn2kw")
+sources/1 = SubResource("TileSetAtlasSource_2reo6")
 
 [node name="WallsAndFloors" type="TileMapLayer"]
 tile_set = SubResource("TileSet_h37tu")
