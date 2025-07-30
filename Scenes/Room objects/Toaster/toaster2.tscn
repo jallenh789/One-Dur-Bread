@@ -54,6 +54,6 @@ offset_left = 166.0
 offset_top = 457.0
 offset_right = 1012.0
 offset_bottom = 590.0
-text = "Good idea, that is a toaster, it makes sense for bread to be there, but no luck this time, but you need to put your whole hand in there to check. I need a drink."
+text = "Good idea, that is a toaster, it makes sense for bread to be there, but no luck this time, but you don't need to put your whole hand in there to check. I need a drink."
 label_settings = SubResource("LabelSettings_muxh0")
 autowrap_mode = 3
