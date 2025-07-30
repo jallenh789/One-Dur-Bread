@@ -54,6 +54,6 @@ offset_left = 166.0
 offset_top = 457.0
 offset_right = 1012.0
 offset_bottom = 590.0
-text = "Is there a blast of fidge-ed air in there??? eh......eh????.............. I thougt it was funny.... yeah the bread and your humor is not in there......"
+text = "Is there a blast of fidge-ed air in there??? eh......eh????.............. I thought it was funny.... yeah the bread and your humor is not in there......"
 label_settings = SubResource("LabelSettings_muxh0")
 autowrap_mode = 3
