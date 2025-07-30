@@ -1,9 +1,10 @@
-[gd_scene load_steps=40 format=3 uid="uid://b8bodxvggafb5"]
+[gd_scene load_steps=42 format=3 uid="uid://b8bodxvggafb5"]
 
 [ext_resource type="Script" uid="uid://ch5y1ilx0jt08" path="res://Scenes/Player/player.gd" id="1_ft8w5"]
 [ext_resource type="Texture2D" uid="uid://dmcq4a160h0ap" path="res://Assets/Actor/Player/Shaded 64 bit Character original size.png" id="2_ft8w5"]
 [ext_resource type="PackedScene" uid="uid://b4ggbjkpsjqt3" path="res://interactable components/interacting_compnonent.tscn" id="3_h54ih"]
 [ext_resource type="Texture2D" uid="uid://d0sa42qlicogy" path="res://Assets/Actor/Player/64bit sprite sheet100.png" id="4_jmcll"]
+[ext_resource type="Texture2D" uid="uid://hi8erq8374dx" path="res://Assets/UI/dialog box.png" id="5_jmcll"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lw74r"]
 atlas = ExtResource("2_ft8w5")
@@ -267,9 +268,14 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 radius = 8.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_jmcll"]
+font_size = 28
+font_color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_ft8w5")
+move_speed = 65
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_s0eop")
@@ -282,3 +288,24 @@ scale = Vector2(0.840001, 1.20827)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)
 shape = SubResource("CapsuleShape2D_ft8w5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 147.0
+offset_top = 446.0
+offset_right = 467.0
+offset_bottom = 510.0
+scale = Vector2(2.76, 2.453)
+texture = ExtResource("5_jmcll")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 165.0
+offset_top = 462.0
+offset_right = 1009.0
+offset_bottom = 588.0
+text = "good you are finally up! find the one slice of bread in the room, then you may leave this little experiment area.
+                                         press E to continue....."
+label_settings = SubResource("LabelSettings_jmcll")
+autowrap_mode = 3

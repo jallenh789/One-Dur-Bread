@@ -2,16 +2,24 @@ extends CharacterBody2D
 
 # used to change the player speed 
 @export var move_speed: int = 50
+var start_dialogue: bool = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	pass
+	start_dialogue = true
+	$CanvasLayer.visible = true
+	Global.paused_movement = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	
+	if Input.is_action_just_pressed("interact"):
+		if start_dialogue == true:
+			$CanvasLayer.visible = false
+			Global.paused_movement = false
+			start_dialogue = false
 	
 	movement(Global.paused_movement)
 	
